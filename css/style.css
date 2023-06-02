@@ -1,0 +1,169 @@
+*, *>* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background-color: whitesmoke;
+	background: grey;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+}
+/*
+@font-face {
+ font-family: 'FontyFamily';
+ src: url("../fonts/ditp.ttf");
+}
+*/
+
+#container {
+	width: 1024px;
+	margin: 50px auto;
+	background-color: whitesmoke;
+	padding: 12px;
+}
+
+.cell {
+	padding: 2px;
+}
+
+#stacksContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+#deck, #bin, #drawnCardContainer {
+	width: 120px;/* card: 100px */
+	height: 144px;/* card: 120px */
+	margin: 4px 8px;
+	padding-top: 12px;
+}
+
+#deck {
+	background-color: lightblue;
+}
+
+#bin {
+	background-color: tomato;
+}
+
+#drawnCardContainer {
+	background-color: lightgrey;
+	margin-left: -150px;
+}
+
+.is-negative{
+	background: linear-gradient(35deg, lightgreen 40%, #53665c 40%);
+}
+.is-positive{
+	background: linear-gradient(35deg, pink 40%, #53665c 40%);
+}
+
+
+
+
+.card {
+	width: 100%;
+	height: 100%;
+}
+.card .front {
+	background-color: brown;
+
+}
+.card .back {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*background-color: #53665c;*/
+
+}
+.card .val {
+	text-align: center;
+}
+
+
+
+
+.card-container {
+	width: 100px;
+	height: 120px;
+	margin: 0 auto;
+    -webkit-perspective: 500px;
+            perspective: 500px;
+}
+
+.card-container.is-turned .card{
+    -webkit-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+.card {
+    -webkit-transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+	color: whitesmoke;
+}
+
+.front, .back {
+  box-shadow: 0 1px 6px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+#overlay {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #0c0c0ccc;
+	z-index: 10;
+}
+#modalContainer {
+	width: 160px;
+	height: 60px;
+	position: absolute;
+	left: calc(50% - 80px);
+	top: calc(50% - 30px);
+	z-index: 2000;
+}
+#modalContent {
+	background-color: whitesmoke;
+	width: 100%;
+	height: 100%;
+}
+#modalText {
+	color: black;
+}
+
+.modal-part {
+	display: none;
+}

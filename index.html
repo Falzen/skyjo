@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>items</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="modal-part" id="overlay"></div>
+	<div class="modal-part" id="modalContainer">
+		<div id="modalContent"><p id="modalText"></p></div>
+	</div>
+	<div id="container">
+		<div id="stacksContainer">
+			<div id="drawnCardContainer"></div>
+			<div id="deck"><button id="drawFromDeckBtn">draw From Deck</button></div>
+			<div id="bin"><button id="drawFromBinBtn">draw From Bin</button></div>
+		</div>
+		<div id="spread">
+			<table>
+				<tr>
+					<td>
+						<div class="cell">
+							<div class="card" data-val="2"><p class="val">2</p></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!-- jquery -->
+	<script src="js/utils/jquery.js"></script>
+	<script src="js/utils/sweetalert2.all.min.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
